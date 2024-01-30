@@ -3,4 +3,4 @@ function powerTs(a: number, b: number) {
 }
 
 powerTs(5, 3);
-powerTs("5", "3");
+//powerTs("5", "3");
