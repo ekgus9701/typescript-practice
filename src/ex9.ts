@@ -1,4 +1,5 @@
 interface IUser {
+  //앞에 I붙어있으면(IUser) Interface
   name: string;
   greeting(): string;
 }
