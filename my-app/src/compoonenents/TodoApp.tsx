@@ -19,33 +19,33 @@ export default function TodoApp() {
   type TodoLists = Array<TodoItems>;
 
   interface TodoItems {
-    id: number;
+    id: number | string;
     title: string;
     color: string;
   }
 
   const [todoList, setTodoList] = useState<TodoLists>([
     {
-      id: 1,
+      id: uuidv4(),
       title: "todo-1",
       color: "#ccd5ae",
     },
     {
-      id: 2,
+      id: uuidv4(),
       title: "todo-2",
       color: "#e9edc9",
     },
   ]);
 
   const deleteTodo = useCallback(
-    (todoId: number) => {
+    (todoId: number | string) => {
       setTodoList((prev) => prev.filter((todo) => todo.id !== todoId));
     },
     [setTodoList]
   );
 
   const updateTodo = useCallback(
-    (todoId: number, newTitle: string) => {
+    (todoId: number | string, newTitle: string) => {
       setTodoList((prev) =>
         prev.map((todo) =>
           todo.id === todoId ? { ...todo, title: newTitle } : todo
@@ -73,7 +73,7 @@ export default function TodoApp() {
           <button
             onClick={() => {
               const item = {
-                id: incrementCount,
+                id: uuidv4(),
                 title: inputText,
                 color: activeColor,
               };

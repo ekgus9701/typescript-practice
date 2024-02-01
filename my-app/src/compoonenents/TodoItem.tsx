@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export type TodoData = {
-  id: number;
+  id: number | string;
   title: string;
   color: string;
 };

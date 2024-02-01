@@ -5,8 +5,8 @@ import TodoItem, { type TodoData } from "./TodoItem";
 type TodoDataArray = TodoData[];
 export type Props = {
   todoList: TodoDataArray;
-  onDelete: (arg0: number) => void;
-  onUpdate: (arg0: number, arg1: string) => void;
+  onDelete: (id: number | string) => void;
+  onUpdate: (id: number | string, arg1: string) => void;
   inputText: string;
 };
 
