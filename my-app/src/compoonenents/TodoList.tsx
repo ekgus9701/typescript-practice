@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import TodoItem from "./TodoItem";
+//export default인 것은 {} 없이 쓰고 export인 것은 {}를 사용한다.
+import TodoItem, { type TodoData } from "./TodoItem";
 
+type TodoDataArray = TodoData[];
 export type Props = {
-  todoList: Array<{
-    id: number;
-    title: string;
-    color: string;
-  }>;
+  todoList: TodoDataArray;
   onDelete: (arg0: number) => void;
   onUpdate: (arg0: number, arg1: string) => void;
   inputText: string;

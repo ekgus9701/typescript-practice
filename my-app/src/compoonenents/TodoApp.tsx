@@ -2,6 +2,7 @@ import React, { useCallback, useState } from "react";
 import TodoList from "./TodoList";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { v4 as uuidv4 } from "uuid";
 
 const COLOR_MAP = [
   { color: "#ccd5ae" },

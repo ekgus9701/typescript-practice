@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-export type Props = {
-  todo: {
-    id: number;
-    title: string;
-    color: string;
-  };
+export type TodoData = {
+  id: number;
+  title: string;
+  color: string;
+};
 
+type Props = {
+  todo: TodoData;
   remove: () => void;
   update: (arg1: string) => void;
 };
